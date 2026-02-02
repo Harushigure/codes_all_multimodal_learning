@@ -1,0 +1,21 @@
+Python Version==3.12.0
+
+The data-processing pipeline is executed in the following file order:
+
+mask_seg.py: Uses mask images (JPG) to segment the original images (PNG), producing new images that contain only the cuttlefish body.
+
+mask_seg_extra_grey.py: Extracts the cuttlefish body from the previous output and places it onto a new canvas without background, followed by grayscale conversion.
+
+alignment.py: Places the processed images onto a new canvas and aligns them so that the cuttlefish body is centered, with the head oriented upward and the tail downward.
+(Note: a head–tail orientation check to detect inverted specimens is currently missing and was not implemented.)
+
+histogram_equalization.py: Applies histogram equalization to enhance contrast and highlight body-pattern features.
+
+The image sequences produced from each experimental condition are then placed sequentially into the same directory (vgg-input). Using rename.py, the files are renamed according to the experimental order, for example: 1–200, 201–400, …, 1001–1200 (adjustable depending on the actual dataset size).
+
+vgg_feature.py: Extract features (512 dimensions), yielding a total of 1200 feature vectors, each of dimensionality 512.
+
+pca_result.py: Embeds the feature vectors into a two-dimensional principal-component space and generates a distance heatmap.
+
+tsne_result.py / umap_result.py: Performs nonlinear embedding of the feature vectors into two-dimensional t-SNE / UMAP spaces, respectively.
+

@@ -1,0 +1,9 @@
+Python == 3.12.0
+
+This project is designed to create a cuttlefish semantic segmentation dataset suitable for the present study, based on https://blog.csdn.net/qq_40280673/article/details/127449624
+
+video_random_frame.py: Randomly extracts frames from videos for image segmentation dataset preparation
+
+json_to_pngjpg.py: Extracts json files into jpg format original images and png format mask files respectively
+
+data_augmentation.py: Data augmentation module that may not be essential
