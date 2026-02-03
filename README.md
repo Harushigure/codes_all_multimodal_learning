@@ -1,4 +1,4 @@
-A pipeline for quantitative analysis of multimodal learning in cuttlefish camouflage based on computer vision
+A computer-vision–based pipeline for the quantitative analysis of multimodal learning in cuttlefish camouflage, comparing skin-pattern features across experimental groups.
 
 The overall workflow follows the sequence: video preprocessing and image data extraction → semantic segmentation dataset creation → UNet model training to obtain masks → data pipeline operations.
 
