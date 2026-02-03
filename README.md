@@ -1,3 +1,5 @@
+A pipeline for quantitative analysis of multimodal learning in cuttlefish camouflage based on computer vision
+
 The overall workflow follows the sequence: video preprocessing and image data extraction → semantic segmentation dataset creation → UNet model training to obtain masks → data pipeline operations.
 
 The experimental processing is divided into 6 groups:  
